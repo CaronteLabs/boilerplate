@@ -1,0 +1,8 @@
+{
+		"directory": "src/libs",
+    "scripts": {
+    	"preinstall": "",
+      "postinstall": "",
+      "preunistall": ""
+    }
+}

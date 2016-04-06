@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  font-size: 100%;
+  /* defaults for desktop */
+  font-size: 1em;
+  /* equivalent to ~16px */
+  line-height: 1.375em;
+  /* equivalent to ~20px */ }
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  /*
+    The font-size-adjust property gives you better control of the font size when the first selected font is not available.
+    When a font is not available, the browser uses the second specified font. This could result in a big change for the font size. To prevent this, use the font-size-adjust property.
+    All fonts have an "aspect value" which is the size-difference between the lowercase letter "x" and the uppercase letter "X".
+    When the browser knows the "aspect value" for the first selected font, the browser can figure out what font-size to use when displaying text with the second choice font.
+  */
+  font-size-adjust: 0.5; }
+
+h1 {
+  font-size: 3em;
+  /* 2x body copy size = 32px */
+  line-height: 1.05em;
+  /* 45px / 36px */ }
+
+h2 {
+  font-size: 2.25em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.25em;
+  /* 30px / 26px */ }
+
+h3 {
+  font-size: 1.75em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.25em;
+  /* 25px / 22px */ }
+
+h4 {
+  font-size: 1.125em;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.22222222em; }
+
+blockquote {
+  font-size: 1.5em;
+  /* 20px / 16px */
+  line-height: 1.45833333em;
+  /* 25px / 20px */ }
+
+@media screen and (max-width: 320px) {
+  body {
+    line-height: 1.25em; }
+  h1 {
+    font-size: 2em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.25em; }
+  h2 {
+    font-size: 1.625em;
+    /* 2x body copy size = 32px */
+    line-height: 1.15384615em; }
+  h3 {
+    font-size: 1.375em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.13636364em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.11111111em;
+    /* (22px / 18px */ }
+  blockquote {
+    font-size: 1.25em;
+    /* 24px / 16px = */
+    line-height: 1.25em;
+    /* 35px / 24px */ } }
+
+@media screen and (max-width: 720px) and (min-width: 321px) {
+  body {
+    line-height: 1.25em; }
+  h1 {
+    font-size: 2em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.25em; }
+  h2 {
+    font-size: 1.625em;
+    /* 2x body copy size = 32px */
+    line-height: 1.15384615em; }
+  h3 {
+    font-size: 1.375em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.13636364em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.11111111em;
+    /* (22px / 18px */ }
+  blockquote {
+    font-size: 1.25em;
+    /* 24px / 16px = */
+    line-height: 1.25em;
+    /* 35px / 24px */ } }
+
+@media screen and (max-width: 900px) and (min-width: 721px) {
+  body {
+    line-height: 1.375em; }
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125em; }
+  h2 {
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25em; }
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em;
+    /* (22px / 18px */ }
+  blockquote {
+    font-size: 1.5em;
+    /* 24px / 16px = */
+    line-height: 1.45833333em;
+    /* 35px / 24px */ } }

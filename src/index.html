@@ -1,0 +1,382 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>  
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <h1>Caronte Labs Boilerplate</h1>
+        </header>    
+   
+        <main>  
+            <section id="introduction">
+                <div>
+                    <article>
+                        <h2>1. introduction</h2>
+                        <h3>Build modern, lightweight, semantic websites </h3>
+                        <p>A low level, unobtrusive boilerplate that provides a minimal development environment for getting started front-end project fast. It also includes some optional SASS helpers and resources to create elegant websites fastly. Built at <a href="https://labs.caronte.co">Caronte Labs</a></p>
+                    </article>
+                    <article>
+                        <summary>  
+                            <h3>Summary</h3>
+                            <ul>
+                                <li><a href="#introduction">1. Introduction</a></li>
+                                <li><a href="#ide">2. Gettin Started</a></li>
+                                <li><a href="#">3. Managing Assets</a></li>
+                                <li><a href="#">4. Managing Assets</a></li>
+                                <li><a href="#">5. Mixins</a>
+                                    <ul>
+                                        <li><a href="#typography">Typography</a></li>
+                                        <li><a href="#palette">Palettes</a></li>
+                                        <li><a href="#shadow">Shadows</a></li>
+                                        <li><a href="#button">Buttons</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#footer">6. License</a>
+                                <!-- <li><a href="#">Elements</a></li>
+                                <li><a href="#">Elements</a></li> -->
+                            </ul>
+                        </summary>
+                    </article>
+                </div>  
+            </section>
+            <section id="ide">
+                <div>
+                    <article>
+                        <h2>2. Gettin Started</h2>
+                        <h3>Live deveolpment for fast prototyping.</h3>
+                        <p>Gulp and Grunt are avoided in favour of minimal scripting written using native node.js API and a few of third party modules.</p>
+                        <p>Be sure to have node.js and npm installed on your machine, then it's very simple to get started.</p>
+                        
+                    </article>
+                    <article>
+                        <h4>1. Install dependencies</h4>
+                        <code>npm install</code>
+                        <h4>2. Start development server</h4>
+                        <code>node labs --server</code>
+                        <h3>You are ready to go</h3>
+                        <p>Visit <span>http://localhost:3000</span> and start editing content of the <span>src/</span> folder.  Everything is reloaded live</p>
+                    </article>
+                </div> 
+                <summary>
+                        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Full API</a>
+                        <div class="expander-content">
+                            <section>
+                                <h3>Options</h3>
+                                <p>A list of available options:</p>
+                                <h4>--help</h4>
+                                <code>node labs --help</code>
+                                <p>Display all available options</p>
+                                <h4>--server</h4>
+                                <code>node labs --server</code>
+                                <p>Start development server</p>
+                                <h4>--server --silent</h4>
+                                <code>node labs --server --silent</code>
+                                <p>Prevent server to emit sounds</p>
+                                <h4>--production</h4>
+                                <code>node labs --production</code>
+                                <p>Build production version</p>
+                            </section>
+                            <section>
+                                <h3>About IDE</h3>
+                                <p>The IDE simply watches files you edit during development and build* the distribuition version. It starts a web server to serve the distribuition version and inject a javascript script in all html pages to establish a persistent connection with the live server and allows to reload them once any of the file in the <code>src/</code> folder changes.</p>
+
+                                <p>*During the build process CSS files are compiled (using SASS), assets are included in html files, SHA checksum is calculated for each asset, and files and assets are moved from <code>src/</code> folder to <code>dist/</code> folder. Nothing more, nothing less</p>
+
+                                <p class="type">External Modules</p>
+                                <p>Gulp, Grunt or other task auotomator are avoided in favour of minimal node.js native functions and a few of well tested, popular modules. These are: <br/>
+                                    <ul>
+                                        <li><a href="#">Async</a> (async utilities)</li>
+                                        <li><a href="#">Yargs</a> (parameters passing)</li>
+                                        <li><a href="#">Express.js</a> (web server framework)</li>
+                                        <li><a href="#">Socket.io</a> (persistent connection for live development)</li>
+                                        <li><a href="#">Colors</a> (better looking logging)</li>
+                                        <li><a href="#">Play</a> (audio utility)</li>
+                                    </ul>
+                                </p>
+                                <p>Note all these modules aren't really exploited. We plan to remove them in next versions. Feel free to contribute.</p>
+                            </section>
+                        </div>
+                </summary>
+            </section>
+            <section id="typography">
+                <div>
+                    <h1>1. Typography</h1>  
+                    <article>
+                        <p class="type">Default</p>
+                        <h2>I am an &lt;h2&gt; element</h2>
+                        <h3>I am an &lt;h3&gt; element</h3>
+                        <h4><code>@include typography("global");</code></h4>
+                        <p>Passing global as parameters, default styling for all descendent <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;blockquote&gt;</code> tags are applied. Alternatively you can restrict styles to a certain element, for example you can use: <br/><code>@include typography("h1")</code> to set <code>&lt;h1&gt;</code> target style for that element.</p>
+                        <blockquote>"Caronte non ti crucciar..." (Dante)</blockquote>
+
+                        <p>This scale is derived from <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst" target="blank">Robert Bringhurst</a>'s principles, as documented <a href="http://webtypography.net/intro/" target="_blank">here</a></p>
+                    </article>
+                    <article> 
+                        <p class="type">Magazine</p>
+                        <h2>I am an &lt;h2&gt; element</h2>
+                        <h3>I am an &lt;h3&gt; element</h3>
+                        <h4><code>@include typography("global", "magazine");</code></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lorem vel lacus pretium fringilla vitae ut tortor. Donec facilisis tellus eget dolor sagittis, sit amet interdum ante imperdiet. Praesent massa nisl, maximus semper cursus sit amet, interdum nec nunc. </p>
+                    </article>   
+                </div> 
+                <div>
+                    <article>
+                        <!--more scales-->
+                    </article>
+                    <article> 
+                        <!--more scales-->
+                    </article>   
+                </div> 
+            </section>
+            <section id="palette">
+                <div>
+                    <header>
+                        <div>
+                            <h2>Palettes</h2>
+                            <h3>Inspiration for your web project</h3>
+                            <p>Palettes are collected from many sources and submitted by users at all: <a href="#">canova.caronte.co/palettes</a></p>
+                        </div>
+                        <div>
+                            <p>This boilerplate includes a large sets of palettes to get you inspired and getting start fast:</p>
+                            <code>.class {background: palette(palettename, colorindex);}</code>
+                            <p>Example:</p>
+                            <code>.class {background: palette("red-white", 7);}</code>
+                        </div>
+                    </header>
+                    <article>
+                        <h4>green-light-blue</h4>
+                        <section class="green-light-blue">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>blue-light-green</h4>
+                        <section class="blue-light-green">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>yellow-green-blue</h4>
+                        <section class="yellow-green-blue">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>yellow-green</h4>
+                        <section class="yellow-green">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>green-blue-rose</h4>
+                        <section class="green-blue-rose">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>blue-rose</h4>
+                        <section class="blue-rose">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                    </article>
+                    <article>
+                        <h4>red-white</h4>
+                        <section class="red-white">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>black</h4>
+                        <section class="black">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>green-white</h4>
+                        <section class="green-white">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>purple-white</h4>
+                        <section class="purple-white">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>orange-white</h4>
+                        <section class="orange-white">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                        <h4>red-yellow</h4>
+                        <section class="red-yellow">
+                            <div class="a"></div>
+                            <div class="b"></div>
+                            <div class="c"></div>
+                            <div class="d"></div>
+                            <div class="e"></div>
+                            <div class="f"></div>
+                            <div class="g"></div>
+                            <div class="h"></div>
+                            <div class="i"></div>
+                        </section>
+                    </article>
+                </div>
+            </section>
+            <section id="shadow">  
+                <div>
+                    <h2>Shadows</h2>
+                    <p>Box Shadow with custom color and verbosity: <code>@include card(1, white)</code></p>
+                    <article class="a6"><code>@include card(0)</code></article>
+                    <article class="a1"><code>@include card(1)</code></article>
+                    <article class="a2"><code>@include card(2)</code></article>
+                    <article class="a3"><code>@include card(3)</code></article>
+                    <article class="a4"><code>@include card(4)</code></article>
+                    <article class="a5"><code>@include card(5)</code></article>
+
+                </div> 
+            </section>
+
+            <section id="button">
+                <div>
+                    <h2>Buttons</h2>  
+                    
+                    <article class="flat">
+                        <h3>Flat</h3>
+                        <div class="a">Button</div>
+                        <div class="b">Button</div>
+                        <div class="c">Button</div>
+                    </article>
+                    <article class="bordered">
+                        <h3>Bordered</h3>
+                        <div class="c">Button</div>
+                        <div class="b">Button</div>
+                        <div class="a">Button</div>
+                    </article>
+                    <article class="tred">
+                        <h3>3D</h3>
+                        <div class="a">Button</div>
+                        <div class="b">Button</div>
+                        <div class="c">Button</div>
+                    </article>
+                    <article class="base">
+                        <h3>Simple</h3>
+                        <div class="c">Button</div>
+                        <div class="b">Button</div>
+                        <div class="a">Button</div>
+                    </article>
+ 
+                </div> 
+            </section>
+        </main>
+
+        <footer>
+          <div class="footer-logo">
+            <h1>About</h1>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><h3>Content</h3></li>
+              <li><p><a href="javascript:void(0)">About</a></p></li>
+              <li><p><a href="javascript:void(0)">Contact</p></a></li>
+              <li><p><a href="javascript:void(0)">Products</p></a></li>
+            </ul>
+            <ul>
+              <li><h3>Follow Us</h3></li>
+              <li><p><a href="javascript:void(0)">Facebook</p></a></li>
+              <li><p><a href="javascript:void(0)">Twitter</p></a></li>
+              <li><p><a href="javascript:void(0)">YouTube</p></a></li>
+            </ul>
+            <ul>
+              <li><h3>Legal</h3></li>
+              <li><p><a href="javascript:void(0)">Terms and Conditions</a></p></li>
+              <li><p><a href="javascript:void(0)">Privacy Policy</a></p></li>
+            </ul>
+          </div>
+   
+          <hr>
+
+          <p>Caronte non ti crucciar, vuolsi così colà dove si puote ciò che si vuole, e più non dimandare.</p>
+        </footer>
+
+    </body>
+</html>

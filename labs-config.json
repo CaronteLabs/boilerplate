@@ -1,0 +1,25 @@
+{
+	"development_folder": "src",
+	"distribuition_folder": "dist",
+	"production_folder": "production",
+	"web_server_port": 3000,
+	"live_development_port": 3031,
+	"scss": {
+		"watch": "scss",
+		"build": [{
+			"src": "scss/index.scss",
+			"dist": "css/main.css"
+		}, 
+		{
+			"src": "scss/demo.scss",
+			"dist": "css/demo.css"
+		}]
+	},
+	"js": {
+		"watch": "js",
+		"lint": [{
+			"src": "scss/index.scss",
+			"dist": "css/main.css"
+		}]
+	}
+}

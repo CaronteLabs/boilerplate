@@ -1,0 +1,1664 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  background: #0868ac;
+  font-family: verdana;
+  color: #084081;
+  font-size: 100%;
+  /* defaults for desktop */
+  font-size: 1em;
+  /* equivalent to ~16px */
+  line-height: 1.375em;
+  /* equivalent to ~20px */ }
+  @media screen and (max-width: 320px) {
+    body {
+      line-height: 1.25em; } }
+  @media screen and (max-width: 720px) and (min-width: 321px) {
+    body {
+      line-height: 1.25em; } }
+  @media screen and (max-width: 900px) and (min-width: 721px) {
+    body {
+      line-height: 1.375em; } }
+  body .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 800;
+    padding: 0.3em 0;
+    text-align: left;
+    text-transform: uppercase; }
+  body h1 {
+    font-size: 3em;
+    line-height: 1.25em; }
+    @media screen and (max-width: 320px) {
+      body h1 {
+        font-size: 2em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      body h1 {
+        font-size: 2em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      body h1 {
+        font-size: 2.5em;
+        line-height: 1.125em; } }
+  body h2 {
+    font-size: 2.25em;
+    line-height: 1.25em; }
+    @media screen and (max-width: 320px) {
+      body h2 {
+        font-size: 1.625em;
+        line-height: 1.15384615em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      body h2 {
+        font-size: 1.625em;
+        line-height: 1.15384615em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      body h2 {
+        font-size: 2em;
+        line-height: 1.25em; } }
+  body h3 {
+    font-size: 1.375em;
+    line-height: 1.13636364em; }
+    @media screen and (max-width: 320px) {
+      body h3 {
+        font-size: 1.375em;
+        line-height: 1.13636364em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      body h3 {
+        font-size: 1.375em;
+        line-height: 1.13636364em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      body h3 {
+        font-size: 1.5em;
+        line-height: 1.25em; } }
+  body h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em; }
+    @media screen and (max-width: 320px) {
+      body h4 {
+        font-size: 1.125em;
+        line-height: 1.11111111em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      body h4 {
+        font-size: 1.125em;
+        line-height: 1.11111111em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      body h4 {
+        font-size: 1.125em;
+        line-height: 1.22222222em; } }
+  body blockquote {
+    font-size: 1.5em;
+    line-height: 1.45833333em; }
+    @media screen and (max-width: 320px) {
+      body blockquote {
+        font-size: 1.25em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      body blockquote {
+        font-size: 1.25em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      body blockquote {
+        font-size: 1.5em;
+        /* 24px / 16px = */
+        line-height: 1.45833333em; } }
+  body p {
+    font-size: 1.25em;
+    line-height: 1.625em; }
+    @media screen and (max-width: 320px) {
+      body p {
+        font-size: 1.125em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      body p {
+        font-size: 1.125em;
+        line-height: 1.25em; } }
+
+h1 {
+  color: #0868ac; }
+
+h2 {
+  color: #a8ddb5; }
+
+h3 {
+  color: #2b8cbe; }
+
+header {
+  text-align: center; }
+  header h1 {
+    font-size: 3em;
+    line-height: 1.25em; }
+    @media screen and (max-width: 320px) {
+      header h1 {
+        font-size: 2em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      header h1 {
+        font-size: 2em;
+        line-height: 1.25em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      header h1 {
+        font-size: 2.5em;
+        line-height: 1.125em; } }
+  header h1 {
+    color: #a8ddb5; }
+
+a {
+  color: #084081; }
+
+a:hover {
+  color: #0868ac; }
+
+main section > div {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.333em;
+  height: 100%;
+  overflow: hidden; }
+  main section > div::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+main #introduction {
+  text-align: left;
+  background: #7bccc4; }
+  main #introduction h2 {
+    color: #0868ac; }
+  main #introduction article {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 65.95745%;
+    padding: 1em;
+    height: 100%; }
+    main #introduction article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #introduction article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #introduction article:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #introduction article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #introduction article:last-child {
+          margin-right: 0; } }
+    main #introduction article:last-child {
+      background: #a8ddb5;
+      box-shadow: 0 1.5px 4px rgba(8, 64, 129, 0.24), 0 1.5px 6px rgba(8, 64, 129, 0.12);
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 31.91489%; }
+      main #introduction article:last-child h3 {
+        color: #0868ac;
+        margin-left: 1.333em; }
+      main #introduction article:last-child li {
+        line-height: 1.77689em; }
+        main #introduction article:last-child li ul {
+          overflow: auto;
+          display: block; }
+        main #introduction article:last-child li a {
+          text-decoration: none; }
+      main #introduction article:last-child:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #introduction article:last-child {
+          float: left;
+          display: block;
+          margin-right: 3.22581%;
+          width: 100%; }
+          main #introduction article:last-child:last-child {
+            margin-right: 0; } }
+      @media screen and (max-width: 320px) {
+        main #introduction article:last-child {
+          float: left;
+          display: block;
+          margin-right: 3.22581%;
+          width: 100%; }
+          main #introduction article:last-child:last-child {
+            margin-right: 0; } }
+
+main #ide {
+  text-align: left;
+  background: #ccebc5; }
+  main #ide code {
+    background: #7bccc4;
+    padding: 0.42219em;
+    border-radius: 0.42219em; }
+  main #ide article {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    main #ide article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #ide article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #ide article:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #ide article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #ide article:last-child {
+          margin-right: 0; } }
+    main #ide article p span {
+      padding: 0.13372em;
+      border-radius: 0.2376em;
+      background: #a8ddb5; }
+    main #ide article:last-child {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      main #ide article:last-child:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide article:last-child {
+          float: left;
+          display: block;
+          margin-right: 3.22581%;
+          width: 100%; }
+          main #ide article:last-child:last-child {
+            margin-right: 0; } }
+      @media screen and (max-width: 320px) {
+        main #ide article:last-child {
+          float: left;
+          display: block;
+          margin-right: 3.22581%;
+          width: 100%; }
+          main #ide article:last-child:last-child {
+            margin-right: 0; } }
+  main #ide h2 {
+    color: #084081; }
+  main #ide summary {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    width: 100%;
+    font-size: 100%;
+    /* defaults for desktop */
+    font-size: 1em;
+    /* equivalent to ~16px */
+    line-height: 1.375em;
+    /* equivalent to ~20px */ }
+    main #ide summary::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (max-width: 320px) {
+      main #ide summary {
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #ide summary {
+        line-height: 1.25em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      main #ide summary {
+        line-height: 1.375em; } }
+    main #ide summary .type {
+      border-bottom: 1px solid;
+      display: inline-block;
+      font-size: 0.7em;
+      font-weight: 800;
+      padding: 0.3em 0;
+      text-align: left;
+      text-transform: uppercase; }
+    main #ide summary h1 {
+      font-size: 3em;
+      line-height: 1.25em; }
+      @media screen and (max-width: 320px) {
+        main #ide summary h1 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide summary h1 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #ide summary h1 {
+          font-size: 2.5em;
+          line-height: 1.125em; } }
+    main #ide summary h2 {
+      font-size: 2.25em;
+      line-height: 1.25em; }
+      @media screen and (max-width: 320px) {
+        main #ide summary h2 {
+          font-size: 1.625em;
+          line-height: 1.15384615em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide summary h2 {
+          font-size: 1.625em;
+          line-height: 1.15384615em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #ide summary h2 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+    main #ide summary h3 {
+      font-size: 1.375em;
+      line-height: 1.13636364em; }
+      @media screen and (max-width: 320px) {
+        main #ide summary h3 {
+          font-size: 1.375em;
+          line-height: 1.13636364em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide summary h3 {
+          font-size: 1.375em;
+          line-height: 1.13636364em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #ide summary h3 {
+          font-size: 1.5em;
+          line-height: 1.25em; } }
+    main #ide summary h4 {
+      font-size: 1.125em;
+      line-height: 1.22222222em; }
+      @media screen and (max-width: 320px) {
+        main #ide summary h4 {
+          font-size: 1.125em;
+          line-height: 1.11111111em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide summary h4 {
+          font-size: 1.125em;
+          line-height: 1.11111111em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #ide summary h4 {
+          font-size: 1.125em;
+          line-height: 1.22222222em; } }
+    main #ide summary blockquote {
+      font-size: 1.5em;
+      line-height: 1.45833333em; }
+      @media screen and (max-width: 320px) {
+        main #ide summary blockquote {
+          font-size: 1.25em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide summary blockquote {
+          font-size: 1.25em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #ide summary blockquote {
+          font-size: 1.5em;
+          /* 24px / 16px = */
+          line-height: 1.45833333em; } }
+    main #ide summary p {
+      font-size: 1.25em;
+      line-height: 1.625em; }
+      @media screen and (max-width: 320px) {
+        main #ide summary p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #ide summary p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+    main #ide summary .expander-trigger {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border-bottom: 1px solid #a8ddb5;
+      color: #0868ac;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 1.333em;
+      padding-bottom: 0.56278em;
+      text-decoration: none; }
+      main #ide summary .expander-trigger:before {
+        content: "\25BC";
+        margin-right: 0.5em; }
+    main #ide summary .expander-content {
+      overflow: hidden;
+      padding-left: 1.333em;
+      padding-right: 1.333em;
+      padding-bottom: 1.333em;
+      box-shadow: 0 1.5px 4px rgba(8, 64, 129, 0.24), 0 1.5px 6px rgba(8, 64, 129, 0.12);
+      text-align: left;
+      background: #e0f3db;
+      margin-bottom: 1.333em; }
+      main #ide summary .expander-content > section:first-child {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 31.91489%; }
+        main #ide summary .expander-content > section:first-child:last-child {
+          margin-right: 0; }
+        @media screen and (max-width: 720px) and (min-width: 321px) {
+          main #ide summary .expander-content > section:first-child {
+            float: left;
+            display: block;
+            margin-right: 3.22581%;
+            width: 100%; }
+            main #ide summary .expander-content > section:first-child:last-child {
+              margin-right: 0; } }
+        @media screen and (max-width: 320px) {
+          main #ide summary .expander-content > section:first-child {
+            float: left;
+            display: block;
+            margin-right: 3.22581%;
+            width: 100%; }
+            main #ide summary .expander-content > section:first-child:last-child {
+              margin-right: 0; } }
+      main #ide summary .expander-content > section:last-child {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 65.95745%; }
+        main #ide summary .expander-content > section:last-child code {
+          padding: 0.07525em; }
+        main #ide summary .expander-content > section:last-child:last-child {
+          margin-right: 0; }
+        @media screen and (max-width: 720px) and (min-width: 321px) {
+          main #ide summary .expander-content > section:last-child {
+            float: left;
+            display: block;
+            margin-right: 3.22581%;
+            width: 100%; }
+            main #ide summary .expander-content > section:last-child:last-child {
+              margin-right: 0; } }
+        @media screen and (max-width: 320px) {
+          main #ide summary .expander-content > section:last-child {
+            float: left;
+            display: block;
+            margin-right: 3.22581%;
+            width: 100%; }
+            main #ide summary .expander-content > section:last-child:last-child {
+              margin-right: 0; } }
+    main #ide summary .expander-content p {
+      color: #084081; }
+    main #ide summary .expander-hidden:before {
+      content: "\25BA"; }
+    main #ide summary .expander-hidden + .expander-content {
+      display: none; }
+
+main #typography {
+  background: #e0f3db; }
+  main #typography h1 {
+    color: #084081; }
+  main #typography .type {
+    color: #2b8cbe; }
+  main #typography h2 {
+    color: #0868ac; }
+  main #typography h3 {
+    color: #4eb3d3; }
+  main #typography > div:first-child article {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%;
+    font-size: 100%;
+    /* defaults for desktop */
+    font-size: 1em;
+    /* equivalent to ~16px */
+    line-height: 1.375em;
+    /* equivalent to ~20px */ }
+    main #typography > div:first-child article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #typography > div:first-child article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #typography > div:first-child article:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #typography > div:first-child article {
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #typography > div:first-child article {
+        line-height: 1.25em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      main #typography > div:first-child article {
+        line-height: 1.375em; } }
+    main #typography > div:first-child article .type {
+      border-bottom: 1px solid;
+      display: inline-block;
+      font-size: 0.7em;
+      font-weight: 800;
+      padding: 0.3em 0;
+      text-align: left;
+      text-transform: uppercase; }
+    main #typography > div:first-child article h1 {
+      font-size: 3em;
+      line-height: 1.25em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article h1 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article h1 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article h1 {
+          font-size: 2.5em;
+          line-height: 1.125em; } }
+    main #typography > div:first-child article h2 {
+      font-size: 2.25em;
+      line-height: 1.25em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article h2 {
+          font-size: 1.625em;
+          line-height: 1.15384615em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article h2 {
+          font-size: 1.625em;
+          line-height: 1.15384615em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article h2 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+    main #typography > div:first-child article h3 {
+      font-size: 1.375em;
+      line-height: 1.13636364em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article h3 {
+          font-size: 1.375em;
+          line-height: 1.13636364em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article h3 {
+          font-size: 1.375em;
+          line-height: 1.13636364em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article h3 {
+          font-size: 1.5em;
+          line-height: 1.25em; } }
+    main #typography > div:first-child article h4 {
+      font-size: 1.125em;
+      line-height: 1.22222222em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article h4 {
+          font-size: 1.125em;
+          line-height: 1.11111111em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article h4 {
+          font-size: 1.125em;
+          line-height: 1.11111111em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article h4 {
+          font-size: 1.125em;
+          line-height: 1.22222222em; } }
+    main #typography > div:first-child article blockquote {
+      font-size: 1.5em;
+      line-height: 1.45833333em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article blockquote {
+          font-size: 1.25em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article blockquote {
+          font-size: 1.25em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article blockquote {
+          font-size: 1.5em;
+          /* 24px / 16px = */
+          line-height: 1.45833333em; } }
+    main #typography > div:first-child article p {
+      font-size: 1em;
+      line-height: 1.375em; }
+  main #typography > div:first-child article:last-child {
+    font-size: 100%;
+    /* defaults for desktop */
+    font-size: 1em;
+    /* equivalent to ~16px */
+    line-height: 1.375em;
+    /* equivalent to ~20px */ }
+    @media screen and (max-width: 320px) {
+      main #typography > div:first-child article:last-child {
+        line-height: 1.25em; } }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #typography > div:first-child article:last-child {
+        line-height: 1.25em; } }
+    @media screen and (max-width: 900px) and (min-width: 721px) {
+      main #typography > div:first-child article:last-child {
+        line-height: 1.375em; } }
+    main #typography > div:first-child article:last-child .type {
+      border-bottom: 1px solid;
+      display: inline-block;
+      font-size: 0.7em;
+      font-weight: 800;
+      padding: 0.3em 0;
+      text-align: left;
+      text-transform: uppercase; }
+    main #typography > div:first-child article:last-child h1 {
+      font-size: 3em;
+      line-height: 1.25em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article:last-child h1 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article:last-child h1 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article:last-child h1 {
+          font-size: 2.5em;
+          line-height: 1.125em; } }
+    main #typography > div:first-child article:last-child h2 {
+      font-size: 2.25em;
+      line-height: 1.25em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article:last-child h2 {
+          font-size: 1.625em;
+          line-height: 1.15384615em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article:last-child h2 {
+          font-size: 1.625em;
+          line-height: 1.15384615em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article:last-child h2 {
+          font-size: 2em;
+          line-height: 1.25em; } }
+    main #typography > div:first-child article:last-child h3 {
+      font-size: 1.375em;
+      line-height: 1.13636364em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article:last-child h3 {
+          font-size: 1.375em;
+          line-height: 1.13636364em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article:last-child h3 {
+          font-size: 1.375em;
+          line-height: 1.13636364em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article:last-child h3 {
+          font-size: 1.5em;
+          line-height: 1.25em; } }
+    main #typography > div:first-child article:last-child h4 {
+      font-size: 1.125em;
+      line-height: 1.22222222em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article:last-child h4 {
+          font-size: 1.125em;
+          line-height: 1.11111111em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article:last-child h4 {
+          font-size: 1.125em;
+          line-height: 1.11111111em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article:last-child h4 {
+          font-size: 1.125em;
+          line-height: 1.22222222em; } }
+    main #typography > div:first-child article:last-child blockquote {
+      font-size: 1.5em;
+      line-height: 1.45833333em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article:last-child blockquote {
+          font-size: 1.25em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article:last-child blockquote {
+          font-size: 1.25em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 900px) and (min-width: 721px) {
+        main #typography > div:first-child article:last-child blockquote {
+          font-size: 1.5em;
+          /* 24px / 16px = */
+          line-height: 1.45833333em; } }
+    main #typography > div:first-child article:last-child p {
+      font-size: 1.25em;
+      line-height: 1.625em; }
+      @media screen and (max-width: 320px) {
+        main #typography > div:first-child article:last-child p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #typography > div:first-child article:last-child p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+  main #typography > div:last-child article {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    main #typography > div:last-child article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #typography > div:last-child article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #typography > div:last-child article:last-child {
+          margin-right: 0; } }
+
+main #palette {
+  background: #0868ac; }
+  main #palette h2 {
+    color: #f7fcf0; }
+  main #palette h3 {
+    color: #a8ddb5; }
+  main #palette h4 {
+    color: #e0f3db; }
+  main #palette p {
+    color: #f7fcf0; }
+  main #palette a:hover {
+    color: #ccebc5; }
+  main #palette header {
+    text-align: left; }
+    main #palette header code {
+      background: #a8ddb5;
+      padding: 0.31672em;
+      border-radius: 0.2376em; }
+    main #palette header div {
+      padding-left: 0;
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      main #palette header div:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        main #palette header div {
+          float: left;
+          display: block;
+          margin-right: 3.22581%;
+          width: 100%; }
+          main #palette header div:last-child {
+            margin-right: 0; } }
+      @media screen and (max-width: 320px) {
+        main #palette header div {
+          float: left;
+          display: block;
+          margin-right: 3.22581%;
+          width: 100%; }
+          main #palette header div:last-child {
+            margin-right: 0; } }
+  main #palette article {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    main #palette article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #palette article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 112.90323%; }
+        main #palette article:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #palette article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 112.90323%; }
+        main #palette article:last-child {
+          margin-right: 0; } }
+    main #palette article section {
+      width: 100%;
+      overflow: hidden; }
+    main #palette article div {
+      float: left;
+      display: block;
+      margin-right: 2.85714%;
+      width: 8.57143%;
+      height: 60px;
+      margin-right: 0;
+      border-top: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
+      main #palette article div:last-child {
+        margin-right: 0; }
+      main #palette article div:first-child {
+        border-left: 1px solid rgba(255, 255, 255, 0.7); }
+      main #palette article div:last-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.7); }
+  main #palette .yellow-green-blue > div.a {
+    background: #ffffd9; }
+  main #palette .yellow-green-blue > div.b {
+    background: #edf8b1; }
+  main #palette .yellow-green-blue > div.c {
+    background: #c7e9b4; }
+  main #palette .yellow-green-blue > div.d {
+    background: #7fcdbb; }
+  main #palette .yellow-green-blue > div.e {
+    background: #41b6c4; }
+  main #palette .yellow-green-blue > div.f {
+    background: #1d91c0; }
+  main #palette .yellow-green-blue > div.g {
+    background: #225ea8; }
+  main #palette .yellow-green-blue > div.h {
+    background: #253494; }
+  main #palette .yellow-green-blue > div.i {
+    background: #081d58; }
+  main #palette .blue-rose > div.a {
+    background: #fff7fb; }
+  main #palette .blue-rose > div.b {
+    background: #ece7f2; }
+  main #palette .blue-rose > div.c {
+    background: #d0d1e6; }
+  main #palette .blue-rose > div.d {
+    background: #a6bddb; }
+  main #palette .blue-rose > div.e {
+    background: #74a9cf; }
+  main #palette .blue-rose > div.f {
+    background: #3690c0; }
+  main #palette .blue-rose > div.g {
+    background: #0570b0; }
+  main #palette .blue-rose > div.h {
+    background: #045a8d; }
+  main #palette .blue-rose > div.i {
+    background: #023858; }
+  main #palette .green-blue-rose > div.a {
+    background: #fff7fb; }
+  main #palette .green-blue-rose > div.b {
+    background: #ece2f0; }
+  main #palette .green-blue-rose > div.c {
+    background: #d0d1e6; }
+  main #palette .green-blue-rose > div.d {
+    background: #a6bddb; }
+  main #palette .green-blue-rose > div.e {
+    background: #67a9cf; }
+  main #palette .green-blue-rose > div.f {
+    background: #3690c0; }
+  main #palette .green-blue-rose > div.g {
+    background: #02818a; }
+  main #palette .green-blue-rose > div.h {
+    background: #016c59; }
+  main #palette .green-blue-rose > div.i {
+    background: #014636; }
+  main #palette .yellow-green > div.a {
+    background: #ffffe5; }
+  main #palette .yellow-green > div.b {
+    background: #f7fcb9; }
+  main #palette .yellow-green > div.c {
+    background: #d9f0a3; }
+  main #palette .yellow-green > div.d {
+    background: #addd8e; }
+  main #palette .yellow-green > div.e {
+    background: #78c679; }
+  main #palette .yellow-green > div.f {
+    background: #41ab5d; }
+  main #palette .yellow-green > div.g {
+    background: #238443; }
+  main #palette .yellow-green > div.h {
+    background: #006837; }
+  main #palette .yellow-green > div.i {
+    background: #004529; }
+  main #palette .green-light-blue > div.a {
+    background: #f7fcfd; }
+  main #palette .green-light-blue > div.b {
+    background: #e5f5f9; }
+  main #palette .green-light-blue > div.c {
+    background: #ccece6; }
+  main #palette .green-light-blue > div.d {
+    background: #99d8c9; }
+  main #palette .green-light-blue > div.e {
+    background: #66c2a4; }
+  main #palette .green-light-blue > div.f {
+    background: #41ae76; }
+  main #palette .green-light-blue > div.g {
+    background: #238b45; }
+  main #palette .green-light-blue > div.h {
+    background: #006d2c; }
+  main #palette .green-light-blue > div.i {
+    background: #00441b; }
+  main #palette .blue-light-green > div.a {
+    background: #f7fcf0; }
+  main #palette .blue-light-green > div.b {
+    background: #e0f3db; }
+  main #palette .blue-light-green > div.c {
+    background: #ccebc5; }
+  main #palette .blue-light-green > div.d {
+    background: #a8ddb5; }
+  main #palette .blue-light-green > div.e {
+    background: #7bccc4; }
+  main #palette .blue-light-green > div.f {
+    background: #4eb3d3; }
+  main #palette .blue-light-green > div.g {
+    background: #2b8cbe; }
+  main #palette .blue-light-green > div.h {
+    background: #0868ac; }
+  main #palette .blue-light-green > div.i {
+    background: #084081; }
+  main #palette .red-white > div.a {
+    background: #fff5f0; }
+  main #palette .red-white > div.b {
+    background: #fee6ce; }
+  main #palette .red-white > div.c {
+    background: #fcbba1; }
+  main #palette .red-white > div.d {
+    background: #fc9272; }
+  main #palette .red-white > div.e {
+    background: #fb6a4a; }
+  main #palette .red-white > div.f {
+    background: #ef3b2c; }
+  main #palette .red-white > div.g {
+    background: #cb181d; }
+  main #palette .red-white > div.h {
+    background: #a50f15; }
+  main #palette .red-white > div.i {
+    background: #67000d; }
+  main #palette .orange-white > div.a {
+    background: #fff5eb; }
+  main #palette .orange-white > div.b {
+    background: #fee6ce; }
+  main #palette .orange-white > div.c {
+    background: #fdd0a2; }
+  main #palette .orange-white > div.d {
+    background: #fdae6b; }
+  main #palette .orange-white > div.e {
+    background: #fd8d3c; }
+  main #palette .orange-white > div.f {
+    background: #f16913; }
+  main #palette .orange-white > div.g {
+    background: #d94801; }
+  main #palette .orange-white > div.h {
+    background: #a63603; }
+  main #palette .orange-white > div.i {
+    background: #7f2704; }
+  main #palette .black > div.a {
+    background: white; }
+  main #palette .black > div.b {
+    background: #f0f0f0; }
+  main #palette .black > div.c {
+    background: #d9d9d9; }
+  main #palette .black > div.d {
+    background: #bdbdbd; }
+  main #palette .black > div.e {
+    background: #969696; }
+  main #palette .black > div.f {
+    background: #737373; }
+  main #palette .black > div.g {
+    background: #525252; }
+  main #palette .black > div.h {
+    background: #252525; }
+  main #palette .black > div.i {
+    background: black; }
+  main #palette .green-white > div.a {
+    background: #f7fcf5; }
+  main #palette .green-white > div.b {
+    background: #e5f5e0; }
+  main #palette .green-white > div.c {
+    background: #c7e9c0; }
+  main #palette .green-white > div.d {
+    background: #a1d99b; }
+  main #palette .green-white > div.e {
+    background: #74c476; }
+  main #palette .green-white > div.f {
+    background: #41ab5d; }
+  main #palette .green-white > div.g {
+    background: #238b45; }
+  main #palette .green-white > div.h {
+    background: #006d2c; }
+  main #palette .green-white > div.i {
+    background: #00441b; }
+  main #palette .orange-white > div.a {
+    background: #fff5eb; }
+  main #palette .orange-white > div.b {
+    background: #fee6ce; }
+  main #palette .orange-white > div.c {
+    background: #fdd0a2; }
+  main #palette .orange-white > div.d {
+    background: #fdae6b; }
+  main #palette .orange-white > div.e {
+    background: #fd8d3c; }
+  main #palette .orange-white > div.f {
+    background: #f16913; }
+  main #palette .orange-white > div.g {
+    background: #d94801; }
+  main #palette .orange-white > div.h {
+    background: #a63603; }
+  main #palette .orange-white > div.i {
+    background: #7f2704; }
+  main #palette .purple-white > div.a {
+    background: #fcfbfd; }
+  main #palette .purple-white > div.b {
+    background: #efedf5; }
+  main #palette .purple-white > div.c {
+    background: #dadaeb; }
+  main #palette .purple-white > div.d {
+    background: #bcbddc; }
+  main #palette .purple-white > div.e {
+    background: #9e9ac8; }
+  main #palette .purple-white > div.f {
+    background: #807dba; }
+  main #palette .purple-white > div.g {
+    background: #6a51a3; }
+  main #palette .purple-white > div.h {
+    background: #54278f; }
+  main #palette .purple-white > div.i {
+    background: #3f007d; }
+  main #palette .red-yellow > div.a {
+    background: #ffffcc; }
+  main #palette .red-yellow > div.b {
+    background: #ffeda0; }
+  main #palette .red-yellow > div.c {
+    background: #fed976; }
+  main #palette .red-yellow > div.d {
+    background: #feb24c; }
+  main #palette .red-yellow > div.e {
+    background: #fd8d3c; }
+  main #palette .red-yellow > div.f {
+    background: #fc4e2a; }
+  main #palette .red-yellow > div.g {
+    background: #e31a1c; }
+  main #palette .red-yellow > div.h {
+    background: #bd0026; }
+  main #palette .red-yellow > div.i {
+    background: #800026; }
+
+main #shadow {
+  text-align: left;
+  background: #7bccc4; }
+  main #shadow h2 {
+    color: #0868ac; }
+  main #shadow p {
+    box-shadow: 0 1.5px 4px rgba(8, 64, 129, 0.24), 0 1.5px 6px rgba(8, 64, 129, 0.12);
+    padding: 1.333em; }
+  main #shadow article {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 14.89362%;
+    padding: 1.333em; }
+    main #shadow article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #shadow article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%;
+        margin-top: 1.333em;
+        margin-right: 0; }
+        main #shadow article:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #shadow article {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%;
+        margin-top: 1.333em;
+        margin-right: 0; }
+        main #shadow article:last-child {
+          margin-right: 0; } }
+  main #shadow .a1 {
+    box-shadow: 0 1.5px 4px rgba(8, 64, 129, 0.24), 0 1.5px 6px rgba(8, 64, 129, 0.12); }
+  main #shadow .a2 {
+    box-shadow: 0 3px 12px rgba(8, 64, 129, 0.23), 0 3px 12px rgba(8, 64, 129, 0.16); }
+  main #shadow .a3 {
+    box-shadow: 0 6px 12px rgba(8, 64, 129, 0.23), 0 10px 40px rgba(8, 64, 129, 0.19); }
+  main #shadow .a4 {
+    box-shadow: 0 10px 20px rgba(8, 64, 129, 0.22), 0 14px 56px rgba(8, 64, 129, 0.25); }
+  main #shadow .a5 {
+    box-shadow: 0 15px 24px rgba(8, 64, 129, 0.22), 0 19px 76px rgba(8, 64, 129, 0.3); }
+
+main #button {
+  text-align: left;
+  background: #f7fcf0; }
+  main #button h2 {
+    color: #084081; }
+  main #button p {
+    box-shadow: 0 1.5px 4px rgba(8, 64, 129, 0.24), 0 1.5px 6px rgba(8, 64, 129, 0.12);
+    padding: 1.333em; }
+  main #button article {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.333em;
+    width: 100%; }
+    main #button article::after {
+      clear: both;
+      content: "";
+      display: table; }
+    main #button article div {
+      text-align: center; }
+  main #button .flat {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    main #button .flat:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #button .flat {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .flat:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #button .flat {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .flat:last-child {
+          margin-right: 0; } }
+    main #button .flat .a {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #084081;
+      background: #e0f3db;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 0.75019em 1.50038em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .flat .a:disabled {
+        cursor: not-allowed; }
+      main #button .flat .a:focus {
+        outline: none; }
+      main #button .flat .a:hover:not(:disabled) {
+        background: #d0edc8; }
+      main #button .flat .a:active:not(:disabled) {
+        box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.3); }
+      main #button .flat .a:last-child {
+        margin-right: 0; }
+    main #button .flat .b {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #0868ac;
+      background: #ccebc5;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1em 2em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .flat .b:disabled {
+        cursor: not-allowed; }
+      main #button .flat .b:focus {
+        outline: none; }
+      main #button .flat .b:hover:not(:disabled) {
+        background: #bbe4b2; }
+      main #button .flat .b:active:not(:disabled) {
+        box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.3); }
+      main #button .flat .b:last-child {
+        margin-right: 0; }
+    main #button .flat .c {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #2b8cbe;
+      background: #a8ddb5;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1.333em 2.666em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .flat .c:disabled {
+        cursor: not-allowed; }
+      main #button .flat .c:focus {
+        outline: none; }
+      main #button .flat .c:hover:not(:disabled) {
+        background: #96d6a5; }
+      main #button .flat .c:active:not(:disabled) {
+        box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.3); }
+      main #button .flat .c:last-child {
+        margin-right: 0; }
+  main #button .bordered {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%;
+    margin-right: 0 !important; }
+    main #button .bordered:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #button .bordered {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .bordered:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #button .bordered {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .bordered:last-child {
+          margin-right: 0; } }
+    main #button .bordered .a {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #084081;
+      border: 2px solid #e0f3db;
+      background: none;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 0.75019em 1.50038em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .bordered .a:disabled {
+        cursor: not-allowed; }
+      main #button .bordered .a:focus {
+        outline: none; }
+      main #button .bordered .a:active:not(:disabled) {
+        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.3); }
+      main #button .bordered .a:last-child {
+        margin-right: 0; }
+    main #button .bordered .b {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #0868ac;
+      border: 2px solid #ccebc5;
+      background: none;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1em 2em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .bordered .b:disabled {
+        cursor: not-allowed; }
+      main #button .bordered .b:focus {
+        outline: none; }
+      main #button .bordered .b:active:not(:disabled) {
+        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.3); }
+      main #button .bordered .b:last-child {
+        margin-right: 0; }
+    main #button .bordered .c {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #2b8cbe;
+      border: 2px solid #a8ddb5;
+      background: none;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1.333em 2.666em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .bordered .c:disabled {
+        cursor: not-allowed; }
+      main #button .bordered .c:focus {
+        outline: none; }
+      main #button .bordered .c:active:not(:disabled) {
+        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.3); }
+      main #button .bordered .c:last-child {
+        margin-right: 0; }
+  main #button .tred {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    main #button .tred:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #button .tred {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .tred:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #button .tred {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .tred:last-child {
+          margin-right: 0; } }
+    main #button .tred .a {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      top: 0px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: #084081;
+      background: #e0f3db;
+      box-shadow: 0 4px #afe0a2;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 0.75019em 1.50038em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .tred .a:disabled {
+        cursor: not-allowed; }
+      main #button .tred .a:focus {
+        outline: none; }
+      main #button .tred .a:active:not(:disabled) {
+        box-shadow: 0 0px #becfba;
+        top: 4px; }
+      main #button .tred .a:last-child {
+        margin-right: 0; }
+    main #button .tred .b {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      top: 0px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: #0868ac;
+      background: #ccebc5;
+      box-shadow: 0 4px #9ad78c;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1em 2em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .tred .b:disabled {
+        cursor: not-allowed; }
+      main #button .tred .b:focus {
+        outline: none; }
+      main #button .tred .b:active:not(:disabled) {
+        box-shadow: 0 0px #adc8a7;
+        top: 4px; }
+      main #button .tred .b:last-child {
+        margin-right: 0; }
+    main #button .tred .c {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      top: 0px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: #2b8cbe;
+      background: #a8ddb5;
+      box-shadow: 0 4px #71c886;
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1.333em 2.666em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .tred .c:disabled {
+        cursor: not-allowed; }
+      main #button .tred .c:focus {
+        outline: none; }
+      main #button .tred .c:active:not(:disabled) {
+        box-shadow: 0 0px #8fbc9a;
+        top: 4px; }
+      main #button .tred .c:last-child {
+        margin-right: 0; }
+  main #button .base {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%;
+    margin-right: 0 !important; }
+    main #button .base:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 720px) and (min-width: 321px) {
+      main #button .base {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .base:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 320px) {
+      main #button .base {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 100%; }
+        main #button .base:last-child {
+          margin-right: 0; } }
+    main #button .base .a {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #084081;
+      border: 1px solid #bfe6b5;
+      box-shadow: inset 0px 1px 2px 0px rgba(255, 255, 255, 0.5);
+      background: -webkit-linear-gradient(white, #e0f3db);
+      background: linear-gradient(white, #e0f3db);
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 0.75019em 1.50038em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .base .a:disabled {
+        cursor: not-allowed; }
+      main #button .base .a:focus {
+        outline: none; }
+      main #button .base .a:hover:not(:disabled) {
+        box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.3); }
+      main #button .base .a:active:not(:disabled) {
+        background: -webkit-linear-gradient(#afe0a2, #e0f3db);
+        background: linear-gradient(#afe0a2, #e0f3db);
+        box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.3); }
+      main #button .base .a:last-child {
+        margin-right: 0; }
+    main #button .base .b {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #0868ac;
+      border: 1px solid #abde9f;
+      box-shadow: inset 0px 1px 2px 0px rgba(255, 255, 255, 0.5);
+      background: -webkit-linear-gradient(#edf8eb, #ccebc5);
+      background: linear-gradient(#edf8eb, #ccebc5);
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1em 2em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .base .b:disabled {
+        cursor: not-allowed; }
+      main #button .base .b:focus {
+        outline: none; }
+      main #button .base .b:hover:not(:disabled) {
+        box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.3); }
+      main #button .base .b:active:not(:disabled) {
+        background: -webkit-linear-gradient(#9ad78c, #ccebc5);
+        background: linear-gradient(#9ad78c, #ccebc5);
+        box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.3); }
+      main #button .base .b:last-child {
+        margin-right: 0; }
+    main #button .base .c {
+      font: inherit;
+      padding: 7px 14px;
+      border-radius: 3px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      color: #2b8cbe;
+      border: 1px solid #83cf96;
+      box-shadow: inset 0px 1px 2px 0px rgba(255, 255, 255, 0.5);
+      background: -webkit-linear-gradient(#cdebd4, #a8ddb5);
+      background: linear-gradient(#cdebd4, #a8ddb5);
+      -webkit-transition: all, 0.1s;
+      -moz-transition: all, 0.1s;
+      transition: all, 0.1s;
+      padding: 1.333em 2.666em;
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      main #button .base .c:disabled {
+        cursor: not-allowed; }
+      main #button .base .c:focus {
+        outline: none; }
+      main #button .base .c:hover:not(:disabled) {
+        box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.3); }
+      main #button .base .c:active:not(:disabled) {
+        background: -webkit-linear-gradient(#71c886, #a8ddb5);
+        background: linear-gradient(#71c886, #a8ddb5);
+        box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.3); }
+      main #button .base .c:last-child {
+        margin-right: 0; }
+
+footer {
+  background: #4eb3d3;
+  padding: 2.666em 30px;
+  width: 100%; }
+  footer .footer-logo {
+    margin-bottom: 2em;
+    text-align: center; }
+    footer .footer-logo img {
+      height: 3em; }
+  footer .footer-links {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 1.333em; }
+  footer ul {
+    -webkit-flex-basis: 13em;
+    -moz-flex-basis: 13em;
+    flex-basis: 13em;
+    -ms-flex-preferred-size: 13em;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    flex-shrink: 0;
+    -ms-flex-negative: 0;
+    margin-bottom: 2.666em;
+    padding: 0; }
+  footer li {
+    list-style: none;
+    text-align: center; }
+    footer li p {
+      font-size: 1.25em;
+      line-height: 1.625em; }
+      @media screen and (max-width: 320px) {
+        footer li p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        footer li p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+  footer li a {
+    color: rgba(8, 64, 129, 0.4);
+    text-decoration: none; }
+    footer li a p {
+      font-size: 1.25em;
+      line-height: 1.625em; }
+      @media screen and (max-width: 320px) {
+        footer li a p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+      @media screen and (max-width: 720px) and (min-width: 321px) {
+        footer li a p {
+          font-size: 1.125em;
+          line-height: 1.25em; } }
+    footer li a:focus, footer li a:hover {
+      color: #084081; }
+  footer li h3 {
+    color: #084081;
+    margin-bottom: 0.4em; }
+  footer hr {
+    border: 1px solid rgba(8, 64, 129, 0.1);
+    margin: 0 auto 1.333em;
+    width: 12em; }
+  footer p {
+    color: rgba(8, 64, 129, 0.4);
+    margin: auto;
+    max-width: 35em;
+    text-align: center; }

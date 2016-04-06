@@ -1,0 +1,46 @@
+{
+  "index.html, nonidenx.html": {
+    "css": [
+      {
+        "name": "normalize",
+        "path": "./libs/normalize.css/normalize.css",
+        "vendor": "true"
+      },
+      {
+        "name": "main",
+        "path": "./css/main.css"
+      },
+      {
+        "name": "demo",
+        "path": "./css/demo.css"
+      }
+    ],
+    "js": {
+      "pre": [],
+      "post": [
+        {
+          "name": "jquery",
+          "version": "1.8.3",
+          "plugins": [],
+          "path": "./libs/jquery/dist/jquery.js",
+          "vendor": true,
+          "signature": "sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="
+        },
+        {
+          "name": "main",
+          "path": "./js/main.js",
+          "signature": "sha256-OA0+q8jWOWqeV0N8lmGQmUfBKz3GxA8v3PFyk58Lonk="
+        },
+        {
+          "name": "plugin",
+          "path": "./js/plugins.js",
+          "signature": "sha256-xhKb066wefXDENKpYYR4ug1iGZLBpeXvMgkXk33C27c="
+        }
+      ]
+    }
+  },
+  "elements.html": {
+    "css": [],
+    "js": []
+  }
+}

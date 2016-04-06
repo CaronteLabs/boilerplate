@@ -1,0 +1,1230 @@
+@import "base";
+
+
+// $palette : "yellow-green";
+// $palette : "green-blue-rose"; 
+// $palette : "blue-rose"; 
+// $palette : "purple-blue";
+// $palette: "black";
+// $palette: "red-white";
+// $palette: "orange-white";
+// $palette : "yellow-green-blue";
+$palette : "blue-light-green";
+// $palette : "green-light-blue";
+
+body {
+	background: palette($palette, 2);    
+	font-family: verdana;
+	color: palette($palette, 1);
+	@include typography("global", "magazine");    
+}
+
+h1 {
+	color: palette($palette, 2);
+}
+
+h2 {   
+	color: palette($palette, 6);
+}
+
+h3 {
+	color: palette($palette, 3);
+}
+
+h4 {
+	// color: palette($palette, 8); 
+}
+
+header {
+	text-align: center;
+	@include typography("h1"); 
+
+	h1 {
+		color: palette($palette, 6);
+	} 
+	
+}     
+
+a {
+	color: palette($palette, 1);   
+}
+
+a:hover {
+	color: palette($palette, 2);   
+}
+
+
+main {  
+	h1 {
+  
+	}
+
+	section > div {
+		@include outer-container();  
+		padding: modular-scale(1);
+		height: 100%; 
+		overflow:hidden;
+	}
+
+	#introduction {
+
+
+
+		text-align: left;  
+		background: palette($palette, 5); 
+
+		h2 {
+			color: palette($palette, 2);   
+			
+		} 
+
+
+
+
+		article {
+			@include span-columns(8);
+
+			@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			padding: modular-scale(0);
+			height: 100%; 
+
+			&:last-child {
+
+				h3 {
+					color: palette($palette, 2); 
+					margin-left: modular-scale(1);
+		 		}
+
+				li {
+					line-height: modular-scale(2);
+
+					ul {
+						overflow: auto;
+						display: block;
+					}
+
+					a {
+						text-decoration: none;
+					}
+				}
+
+				background: palette($palette, 6);
+				@include card(1, palette($palette, 1));  
+				 
+				@include span-columns(4);
+
+				@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			}
+		}
+
+	}
+
+	#ide {
+
+
+
+		code {
+				background: palette($palette, 5);
+				padding: modular-scale(-3);
+				border-radius: modular-scale(-3);
+			}
+
+		article {    
+			@include span-columns(6);
+
+			@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			
+
+			p span {
+				padding: modular-scale(-7);
+				border-radius: modular-scale(-5);
+				background: palette($palette, 6);
+			}
+
+			&:last-child {
+
+				@include span-columns(6);
+
+				@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+			}
+		}
+
+
+		text-align: left;  
+		background: palette($palette, 7); 
+
+		h2 {
+			color: palette($palette, 1);   
+		}
+
+		summary {  
+
+
+
+			@include outer-container;
+			text-align: right; 
+		  
+		  $base-spacing: 1.5em !default;
+		  $action-color: palette($palette, 2) !default;
+		  $dark-gray: palette($palette, 2) !default;
+		  $light-gray: palette($palette, 6) !default;
+		  width: 100%;
+		  @include typography("global", "magazine");
+
+		  .expander-trigger {
+		    @include user-select(none);
+		    border-bottom: 1px solid $light-gray;
+		    color: $action-color;
+		    cursor: pointer;
+		    display: block;
+		    margin-bottom: modular-scale(1);
+		    padding-bottom: modular-scale(-2);
+		    text-decoration: none;
+
+		    &:before {
+		      content: "\25BC";
+		      margin-right: 0.5em;
+		    }
+		  }
+
+		  .expander-content {
+
+		  	overflow:hidden;
+		  	padding-left: modular-scale(1);
+		  	padding-right: modular-scale(1);
+		  	padding-bottom: modular-scale(1);
+
+		  	& > section:first-child {
+				@include span-columns(4);
+					@include media($tablet) {
+						@include span-columns(8);
+					}
+
+					@include media($mobile) {
+						@include span-columns(8);
+					}
+				}	
+
+				& > section:last-child {
+					code {
+						padding: modular-scale(-9);
+					}
+
+					@include span-columns(8);
+
+					@include media($tablet) {
+						@include span-columns(8);
+					}
+
+					@include media($mobile) {
+						@include span-columns(8);
+					}
+
+				}
+
+
+
+		  	@include card(1, palette($palette, 1));
+		  	text-align: left; 
+		  	background: palette($palette, 8);
+		  	margin-bottom: modular-scale(1);
+		  }
+
+		  .expander-content p {
+		    color: palette($palette, 1);
+		  }
+
+		  .expander-hidden {
+		    &:before {
+		      content: "\25BA";
+		    }
+		  }
+
+		  .expander-hidden + .expander-content {
+		    display: none;
+		  }
+		}
+	}
+
+
+
+	#typography {
+
+		background: palette($palette, 8); 
+
+		h1 {color: palette($palette, 1)}
+
+		.type {
+			color: palette($palette, 3);
+		}
+
+		h2 {color: palette($palette, 2)}
+
+		h3 {color: palette($palette, 4)}
+
+		h4 {
+			code {
+
+		
+			}
+		}
+
+		code{
+			// background: palette($palette, 5);
+			// border-radius: 6px;
+			// padding: modular-scale(-9);
+		}
+
+		& > div:first-child {
+			article {
+				@include span-columns(6); 
+
+				@include media($tablet, $mobile) {
+					@include span-columns(8);  
+				}
+
+				@include typography("global"); 
+			}
+			
+
+			article:last-child {
+				@include typography("global", "magazine"); 
+			}
+		}
+
+		& > div:last-child {
+			article {
+				@include span-columns(6); 
+
+				@include media($tablet, $mobile) {
+					@include span-columns(8);  
+				}
+			}
+			
+
+			// article {
+			// 	$base-border-radius: 3px !default;
+			//   $base-line-height: 1.5em !default;
+			//   $base-spacing: 1.5em !default;
+			//   $action-color: #477DCA !default;
+			//   $dark-gray: #333 !default;
+			//   $light-gray: #DDD !default;
+			//   $medium-screen: em(640) !default;
+			//   $base-font-color: $dark-gray !default;
+			//   $sans-serif: 'Nunito', sans-serif;
+			//   $sans-serif-2: 'Varela Round', sans-serif;
+
+			//   @include clearfix;
+			//   font-family: $sans-serif;
+			//   text-align: left;
+			  
+			//   h1, h2, h3, p {
+			//     margin: 0;
+			//   }
+
+			//   hr {
+			//     border-bottom: 1px solid $light-gray;
+			//     border-left: none;
+			//     border-right: none;
+			//     border-top: none;
+			//     margin: $base-spacing 0;
+			//   }
+
+			//   p {
+			//     color: $base-font-color;
+			//     line-height: $base-line-height;
+			//   }
+
+			//   a {
+			//     color: $action-color;
+			//     text-decoration: none;
+			//   }
+
+			  
+
+			//   h1 {
+			// 	  font-family: $sans-serif-2;
+			// 	  font-size: 1.8em;
+			// 	  margin-bottom: 0.5em;
+
+			// 	  @include media($medium-screen) {
+			// 	    font-size: 2.4em;
+			// 	  }
+			// 	}
+
+			// 	h2 {
+			// 	  font-family: $sans-serif-2;
+			// 	  font-size: 1.2em;
+			// 	  font-weight: 400;
+			// 	  line-height: 1.4em;
+			// 	  margin-bottom: 0.9em;
+
+			// 	  @include media($medium-screen) {
+			// 	    font-size: 1.4em;
+			// 	  }
+			// 	}
+
+			// 	code {
+			// 	  background: #F7F7F7;
+			// 	  border-radius: $base-border-radius * 1.5;
+			// 	  border: 1px solid #E0E0E0;
+			// 	  font-family: monaco;
+			// 	  font-size: 0.7em;
+			// 	  font-style: normal;
+			// 	  padding: 0.1em 0.4em;
+			// 	  white-space: nowrap;
+			// 	}
+
+
+			// 	h3 {
+			// 	  font-family: $sans-serif-2;
+			// 	  font-size: 1.2em;
+			// 	  font-weight: 400;
+			// 	  line-height: 1.3em;
+			// 	  margin-bottom: 0.4em;
+			// 	}
+
+			// 	p.date {
+			// 	  color: transparentize($base-font-color, 0.6);
+			// 	  font-family: $sans-serif;
+			// 	  font-size: 0.9em;
+			// 	  margin-bottom: 0.3em;
+			// 	}
+
+			// 	p {
+			// 	  font-family: $sans-serif;
+			// 	  font-size: 1.05em;
+			// 	  font-weight: 300;
+			// 	  line-height: 1.4em;
+			// 	  margin-bottom: 1.5em;
+
+			// 	  span {
+			// 	    font-family: $sans-serif-2;
+			// 	    font-size: 0.8em;
+			// 	    text-transform: uppercase;
+			// 	  }
+			// 	}
+
+			// 	a.read-more {
+			// 	  display: inline-block;
+			// 	  font-family: $sans-serif-2;
+			// 	  font-size: 0.8em;
+			// 	  font-weight: 700;
+			// 	  margin-left: 0.2em;
+			// 	  position: relative;
+			// 	  text-transform: uppercase;
+
+			// 	  span {
+			// 	    font-size: 1.5em;
+			// 	    position: absolute;
+			// 	    right: -12px;
+			// 	    top: -1px;
+			// 	  }
+			// 	}
+
+			// 	hr {
+			// 	  width: 3em;
+			// 	}
+
+			// 	p.author {
+			// 	  font-family: $sans-serif;
+			// 	}
+			// }
+		}
+
+	}
+
+	#palette {
+
+		background: palette($palette, 2); 
+
+		h2 {
+			color: palette($palette, 9); 
+		}
+
+		h3 {
+			color: palette($palette, 6); 
+		}
+
+		h4 {
+			color: palette($palette, 8); 
+		}
+
+		p {
+			color: palette($palette, 9); 
+		}
+
+		a:hover {
+			color: palette($palette, 7); 
+		}
+
+		header {
+
+			text-align: left;
+
+			code {
+				background: palette($palette, 6); 
+				padding: modular-scale(-4);
+				border-radius: modular-scale(-5);
+			}
+
+			div {
+				padding-left: 0;
+				@include span-columns(6);
+				@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+			}
+
+
+		}
+
+		article {
+			@include span-columns(6);
+
+				@include media($tablet) {
+					@include span-columns(9);
+				}
+
+				@include media($mobile) {
+					@include span-columns(9);
+				}			
+
+			section {width: 100%; overflow: hidden}
+
+			div {
+				@include span-columns(1 of 9);
+				height: 60px;
+				margin-right: 0;
+				border-top: 1px solid white;
+				border-bottom: 1px solid rgba(255,255,255,0.7);
+				&:first-child {
+					border-left: 1px solid rgba(255,255,255,0.7);
+				}
+
+				&:last-child {
+					border-right: 1px solid rgba(255,255,255,0.7);
+				}
+			}
+		}
+
+		.yellow-green-blue {
+			$palette: "yellow-green-blue";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.blue-rose {
+			$palette: "blue-rose";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.green-blue-rose {
+			$palette: "green-blue-rose";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.yellow-green {
+			$palette: "yellow-green";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.green-light-blue {
+			$palette: "green-light-blue";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.blue-light-green {
+			$palette: "blue-light-green";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.red-white {
+			$palette: "red-white";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+		.orange-white {
+			$palette: "orange-white";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+		.black {
+			$palette: "black";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+		.green-white {
+			$palette: "green-white";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.orange-white {
+			$palette: "orange-white";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.purple-white {
+			$palette: "purple-white";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+		.red-yellow {
+			$palette: "red-yellow";
+			& > div.a {
+				background: palette($palette, 9);
+			}
+			& > div.b {
+				background: palette($palette, 8);
+			}
+			& > div.c {
+				background: palette($palette, 7);
+			}
+			& > div.d {
+				background: palette($palette, 6);
+			}
+			& > div.e {
+				background: palette($palette, 5);
+			}
+			& > div.f {
+				background: palette($palette, 4);
+			}
+			& > div.g {
+				background: palette($palette, 3);
+			}
+			& > div.h {
+				background: palette($palette, 2);
+			}
+			& > div.i {
+				background: palette($palette, 1);
+			}
+		}
+
+	}
+
+
+	#shadow {
+
+		text-align: left;  
+		background: palette($palette, 5); 
+
+		h2 {
+			color: palette($palette, 2);   
+			
+		} 
+
+
+		p {
+			@include card(1, palette($palette, 1));
+			padding: modular-scale(1);
+		}
+
+
+		article {
+
+			@include span-columns(2);
+
+			@include media($tablet) {
+				@include span-columns(8);
+				margin-top: modular-scale(1);
+				margin-right: 0;
+			}
+
+			@include media($mobile) {
+				@include span-columns(8);
+				margin-top: modular-scale(1);
+				margin-right: 0;
+			}
+
+			padding: modular-scale(1);
+		}
+
+		.a1 {
+			@include card(1, palette($palette, 1));
+		}
+
+		.a2 {
+			@include card(2, palette($palette, 1));
+		}
+
+		.a3 {
+			@include card(3, palette($palette, 1));
+		}
+
+		.a4 {
+			@include card(4, palette($palette, 1));
+		}
+
+		.a5 {
+			@include card(5, palette($palette, 1));
+		}
+
+		.a6{  
+			@include card(6, palette($palette, 1));
+		}
+
+	}
+
+	#button {
+
+		text-align: left;  
+		background: palette($palette, 9); 
+
+		h2 {
+			color: palette($palette, 1);   
+			
+		} 
+
+
+		p {
+			@include card(1, palette($palette, 1));
+			padding:modular-scale(1);
+		}
+
+
+		article  {
+
+				@include outer-container;
+				margin-top: modular-scale(1);
+				width: 100%;
+
+				div {
+				text-align: center;
+				// margin-right: modular-scale(-1);
+			}
+		}
+
+			
+		.flat {
+			 @include span-columns(6);
+
+			 @include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			.a {
+		    @include bbb_flat_style(palette($palette, 8), palette($palette, 1)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(-1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.b {
+		    @include bbb_flat_style(palette($palette, 7), palette($palette, 2)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(0)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.c {
+		    @include bbb_flat_style(palette($palette, 6), palette($palette, 3)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+		}
+
+		.bordered {
+			@include span-columns(6);
+
+			@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			margin-right: 0 !important;
+			.a {
+		    @include bbb_bordered_style(palette($palette, 8), palette($palette, 1)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(-1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.b {
+		    @include bbb_bordered_style(palette($palette, 7), palette($palette, 2)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(0)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.c {
+		    @include bbb_bordered_style(palette($palette, 6), palette($palette, 3)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+		}
+
+		.tred {
+			 @include span-columns(6);
+
+			 @include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			.a {
+		    @include bbb_3D_style(palette($palette, 8), palette($palette, 1)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(-1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.b {
+		    @include bbb_3D_style(palette($palette, 7), palette($palette, 2)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(0)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.c {
+		    @include bbb_3D_style(palette($palette, 6), palette($palette, 3)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+		}
+
+		.base {
+			@include span-columns(6);
+			margin-right: 0 !important;
+			@include media($tablet) {
+					@include span-columns(8);
+				}
+
+				@include media($mobile) {
+					@include span-columns(8);
+				}
+
+			.a {
+		    @include bbb_simple_style(palette($palette, 8), palette($palette, 1)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(-1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.b {
+		    @include bbb_simple_style(palette($palette, 7), palette($palette, 2)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(0)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+			.c {
+		    @include bbb_simple_style(palette($palette, 6), palette($palette, 3)); // Ooooh flat style OTB!
+		    @include bbb_size(modular-scale(1)); // I would like it bigger than usual please
+		    @include span-columns(2 of 6);
+			}
+		}
+
+	}
+}
+
+footer {
+  $base-spacing: modular-scale(1) !default;
+  $action-color: palette($palette, 6) !default;
+  $footer-background: palette($palette, 4);
+  $footer-color: palette($palette, 1);
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $footer-background;
+  padding: ($base-spacing * 2) $gutter;
+  width: 100%;
+
+  .footer-logo {
+    margin-bottom: 2em;
+    text-align: center;
+
+    img {
+      height: 3em;
+    }
+  } 
+
+  .footer-links {
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    margin-bottom: $base-spacing;
+  }
+
+  ul {
+    @include flex-basis(13em);
+    @include flex-shrink(0);
+    margin-bottom: $base-spacing * 2;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    text-align: center;
+     @include typography("p", "magazine");
+  }
+
+  li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    @include typography("p", "magazine");
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  li h3 {
+    color: $footer-color;
+    margin-bottom: 0.4em;
+  }  
+
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+    margin: 0 auto $base-spacing;
+    width: 12em;
+  }
+
+  p {
+    color: $footer-disclaimer-color;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+

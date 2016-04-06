@@ -1,0 +1,19 @@
+@import "bourbon/bourbon";
+@import "neat/neat-helpers";
+
+
+//outer-container-values
+$max-width: 1200px;
+$gutter: 30px;
+$column: 90px;
+
+
+// Define your breakpoints
+$desktop_large: new-breakpoint(min-width 1201px 12);
+$desktop: new-breakpoint(min-width 901px max-width 1200px 12);
+$tablet_large: new-breakpoint(max-width 900px min-width 721px 8);  
+$tablet: new-breakpoint(max-width 720px min-width 321px 8);  
+$mobile: new-breakpoint(max-width 320px 8);
+
+
+// https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/how-to-choose-breakpoints

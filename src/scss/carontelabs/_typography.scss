@@ -1,0 +1,224 @@
+@mixin h1() {
+  font-size: 3em; 
+  line-height: 1.25em;
+
+  @include media($mobile) {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+
+  @include media ($tablet) {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+  @include media ($tablet_large) {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+  
+}
+
+@mixin h2() {
+  font-size: 2.25em;
+  line-height: 1.25em;
+
+  @include media($mobile) {
+    font-size: 1.625em;
+    line-height: 1.15384615em;
+  }
+
+  @include media ($tablet) {
+    font-size: 1.625em;
+    line-height: 1.15384615em;
+  } 
+
+  @include media ($tablet_large) {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+}
+
+@mixin h3() {
+  font-size: 1.375em;
+  line-height: 1.13636364em;
+
+  @include media($mobile) {
+    font-size: 1.375em;
+    line-height: 1.13636364em;
+  }
+  @include media ($tablet) {
+    font-size: 1.375em;
+    line-height: 1.13636364em;
+  }
+  @include media ($tablet_large) {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+}
+
+@mixin h4() {
+  font-size: 1.125em;
+  line-height: 1.22222222em;
+
+  @include media($mobile) {
+    font-size: 1.125em;
+    line-height: 1.11111111em;
+  }
+
+  @include media ($tablet) {
+    font-size: 1.125em;
+    line-height: 1.11111111em;
+  }
+  @include media ($tablet_large) {
+    font-size: 1.125em;
+    line-height: 1.22222222em;
+  }
+}
+
+@mixin category() {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 800;
+  padding: 0.3em 0;
+  text-align: left;
+  text-transform: uppercase;   
+}
+
+@mixin blockquote() {
+  font-size: 1.5em;
+  line-height: 1.45833333em;
+
+  @include media($mobile) {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+
+  @include media ($tablet) {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+
+  @include media ($tablet_large) {
+    font-size: 1.5em;
+    /* 24px / 16px = */
+    line-height: 1.45833333em;
+  }
+}
+
+@mixin p() {
+  font-size: 1em;
+  line-height: 1.375em;
+
+  @include media($mobile) {}
+  @include media ($tablet) {}
+  @include media ($tablet_large) {}
+}
+
+
+
+@mixin p_magazine() {
+
+  font-size: 1.25em;
+  line-height: 1.625em; 
+
+  @include media($mobile) {
+    font-size: 1.125em;
+    line-height: 1.25em;
+  }
+  @include media ($tablet) {
+    font-size: 1.125em;
+    line-height: 1.25em;
+  }
+  @include media ($tablet_large) {}
+}
+
+
+@mixin typography($namespace: "global", $type: "default") {
+
+  @if $namespace == "global" {
+    font-size: 100%;
+    /* defaults for desktop */
+    font-size: 1em;
+    /* equivalent to ~16px */
+    line-height: 1.375em;
+    /* equivalent to ~20px */ 
+    @include media($mobile) {
+      line-height: 1.25em;
+    }
+    @include media ($tablet) {
+      line-height: 1.25em;
+    }
+    @include media ($tablet_large) {
+      line-height: 1.375em;
+    }
+
+    .type {
+      @include category();
+    }
+
+    // caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+    //   font-size-adjust: 0.5;
+    // }
+    h1 {
+      @include h1();
+    }
+    h2 {
+      @include h2();
+    }
+    h3 {
+      @include h3();
+    }
+    h4 {
+      @include h4();
+    }
+    blockquote {
+      @include blockquote();
+    }
+
+    @if $type == "default" {
+      p {
+        @include p();
+      }
+      
+    } @else {
+      p {
+        @include p_magazine();
+      }
+    }  
+  } @else if $namespace == "h1" {
+    h1 {
+      @include h1();
+    }
+  } @else if $namespace == "h2" {
+    h2 {
+      @include h2();
+    }
+  } @else if $namespace == "h3" {
+    h3 {
+      @include h3();
+    }
+  } @else if $namespace == "h4" {
+    h4 {
+      @include h4();
+    }
+  } @else if $namespace == "blockquote" {
+    blockquote {
+      @include blockquote();
+    }
+  } @else if $namespace == "p" {
+    @if $type == "default" {
+      p {
+        @include p();
+      }
+      
+    } @else {
+      p {
+        @include p_magazine();
+      }
+    }  
+  }
+}
+
+
+
