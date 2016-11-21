@@ -8,11 +8,11 @@ module.exports = function(option) {
 
 	var io = require('socket.io')(option.socketPort || 3031);
 	io.on('connection', function (socket) {
-    sockets.push(socket)
+    sockets.push(socket);
   });
 
 	app.get('/__live.js', function(req, res) {
-    res.sendFile(path.resolve(__dirname + './../node_modules/socket.io/node_modules/socket.io-client/socket.io.js'));
+    res.sendFile(path.resolve(__dirname + './../node_modules/socket.io-client/socket.io.js'));
   });
 
   app.get('/___live.js', function(req, res) {
@@ -44,4 +44,4 @@ module.exports = function(option) {
 		}
 	};
 
-} 
+}
